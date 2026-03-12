@@ -1,0 +1,26 @@
+language:
+  code: fr
+  aliases: [fr, fr_fr, francais, français]
+commands:
+  login:
+    aliases: [login, connexion]
+  register:
+    aliases: [register, enregistrer]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8» &r'
+  no-permission: '%prefix%&cVous n''avez pas la permission.'
+auth:
+  register-prompt: '%prefix%&eUtilisez /register <motdepasse> <motdepasse> pour vous inscrire.'
+  login-prompt: '%prefix%&eUtilisez /login <motdepasse> pour vous connecter.'
+visual:
+  register:
+    title: '&6Inscription'
+    subtitle: '&fCréez votre mot de passe pour continuer'
+  login:
+    title: '&6Connexion'
+    subtitle: '&fConnectez-vous pour entrer'
+  captcha:
+    title: '&6Captcha'
+    subtitle: '&fConfirmez que vous êtes humain'

@@ -1,0 +1,26 @@
+language:
+  code: ar
+  aliases: [ar, arabic]
+commands:
+  login:
+    aliases: [login]
+  register:
+    aliases: [register]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8» &r'
+  no-permission: '%prefix%&cليست لديك صلاحية.'
+auth:
+  register-prompt: '%prefix%&eاستخدم /register <password> <password> للتسجيل.'
+  login-prompt: '%prefix%&eاستخدم /login <password> لتسجيل الدخول.'
+visual:
+  register:
+    title: '&6تسجيل'
+    subtitle: '&fأنشئ كلمة المرور للمتابعة'
+  login:
+    title: '&6دخول'
+    subtitle: '&fقم بالمصادقة للدخول'
+  captcha:
+    title: '&6كابتشا'
+    subtitle: '&fأكد أنك إنسان'

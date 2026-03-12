@@ -1,0 +1,109 @@
+language:
+  code: pt_br
+  aliases: [pt_br, br, pt, portugues, portuguese]
+commands:
+  login:
+    aliases: [login, logar, entrar]
+  register:
+    aliases: [register, registrar, cadastro]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8>> &r'
+  player-only: '%prefix%&cApenas jogadores podem usar este comando.'
+  no-permission: '%prefix%&cVoce nao tem permissao.'
+  unexpected-error: '%prefix%&cOcorreu um erro interno. Verifique os logs do servidor.'
+  reloaded: '%prefix%&aConfiguracoes, storage e traducoes foram recarregados.'
+  version: '%prefix%&fVersao: &e{0} &8| &fCompat: &e{1}'
+command:
+  usage-login: '%prefix%&eUso: /login <senha>'
+  usage-register: '%prefix%&eUso: /register <senha> <senha>'
+  usage-user: '%prefix%&eUso: /hlogin user <jogador>'
+  usage-unregister: '%prefix%&eUso: /hlogin unregister <jogador>'
+  usage-resetpassword: '%prefix%&eUso: /hlogin resetpassword <jogador>'
+  usage-setlang: '%prefix%&eUso: /hlogin setlang <jogador> <idioma>'
+  usage-forcecaptcha: '%prefix%&eUso: /hlogin forcecaptcha <jogador>'
+  admin-help:
+    - '&6&l Comandos hLogin'
+    - '&e/hlogin reload &7- Recarrega configs e traducoes'
+    - '&e/hlogin status &7- Mostra o estado atual'
+    - '&e/hlogin user <jogador> &7- Exibe a conta'
+    - '&e/hlogin unregister <jogador> &7- Remove a conta'
+    - '&e/hlogin resetpassword <jogador> &7- Gera senha temporaria'
+    - '&e/hlogin setlang <jogador> <idioma> &7- Altera o idioma'
+    - '&e/hlogin forcecaptcha <jogador> &7- Forca um captcha'
+admin:
+  status-line: '%prefix%&fPlugin: &e{0} &8| &fAdapter: &e{1} &8| &fStorage: &e{2} &8| &fSessoes: &e{3}'
+  debug-enabled: '%prefix%&aModo debug ativado.'
+  debug-disabled: '%prefix%&cModo debug desativado.'
+  user-not-found: '%prefix%&cConta nao encontrada.'
+  user-not-online: '%prefix%&cEsse jogador nao esta online.'
+  unregister-success: '%prefix%&aConta removida com sucesso.'
+  resetpassword-success: '%prefix%&aSenha redefinida com sucesso.'
+  language-set: '%prefix%&aIdioma atualizado com sucesso.'
+  forcecaptcha-success: '%prefix%&aCaptcha forcado com sucesso.'
+  user-header: '%prefix%&fPerfil de &e{0}'
+  user-line: '&8- &f{0}: &e{1}'
+auth:
+  session-missing: '%prefix%&cSua sessao de autenticacao ainda nao esta pronta.'
+  already-registered: '%prefix%&cEsta conta ja esta registrada.'
+  not-registered: '%prefix%&cVoce precisa se registrar primeiro.'
+  login-invalid: '%prefix%&cSenha invalida.'
+  blocked: '%prefix%&cVoce esta temporariamente bloqueado para logar.'
+  login-success: '%prefix%&aLogin realizado com sucesso.'
+  logout-success: '%prefix%&eVoce foi deslogado.'
+  register-success: '%prefix%&aRegistro concluido com sucesso.'
+  register-login-success: '%prefix%&aRegistro concluido e login realizado automaticamente.'
+  password-updated: '%prefix%&aSenha atualizada com sucesso.'
+  password-empty: '%prefix%&cA senha nao pode estar vazia.'
+  password-too-short: '%prefix%&cA senha e muito curta.'
+  password-too-long: '%prefix%&cA senha e muito longa.'
+  password-mismatch: '%prefix%&cA confirmacao da senha nao confere.'
+  password-missing-uppercase: '%prefix%&cA senha precisa ter letra maiuscula.'
+  password-missing-lowercase: '%prefix%&cA senha precisa ter letra minuscula.'
+  password-missing-number: '%prefix%&cA senha precisa ter numero.'
+  password-missing-special: '%prefix%&cA senha precisa ter caractere especial.'
+  password-blocked-pattern: '%prefix%&cA senha contem um padrao bloqueado.'
+  password-valid: '%prefix%&aSenha aceita.'
+  register-prompt: '%prefix%&eUse /register <senha> <senha> para criar sua conta.'
+  login-prompt: '%prefix%&eUse /login <senha> para se autenticar.'
+captcha:
+  none: '%prefix%&cNao existe captcha pendente.'
+  required: '%prefix%&eResolva o captcha antes de continuar.'
+  timeout: '%prefix%&cO captcha expirou.'
+  failed: '%prefix%&cResposta do captcha incorreta.'
+  success: '%prefix%&aCaptcha resolvido com sucesso.'
+  solve-now: '&eResolva o captcha agora'
+  inventory-title: 'Verificacao de Seguranca'
+  inventory-prompt-animal: '&eCaptcha: &fclique na cabeca de {0}.'
+  inventory-correct: '&aCorreto'
+  inventory-wrong: '&cErrado'
+  animals:
+    penguin: 'Pinguim'
+    fox: 'Raposa'
+    elephant: 'Elefante'
+    zebra: 'Zebra'
+    lion: 'Leao'
+protection:
+  command-blocked: '%prefix%&cVoce precisa se autenticar antes de usar este comando.'
+session:
+  timeout-kick: '&cTempo de autenticacao excedido.'
+visual:
+  register:
+    title: '&6Registrar'
+    subtitle: '&fCrie sua senha para continuar'
+    hologram:
+      - '&6&lRegistro'
+      - '&fUse &e/register <senha> <senha>'
+  login:
+    title: '&6Login'
+    subtitle: '&fAutentique-se para acessar o servidor'
+    hologram:
+      - '&6&lLogin'
+      - '&fUse &e/login <senha>'
+  captcha:
+    title: '&6Captcha'
+    subtitle: '&fConfirme que voce e humano'
+    hologram:
+      - '&6&lCaptcha'
+      - '&fResolva o desafio abaixo'

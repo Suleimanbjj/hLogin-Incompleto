@@ -1,0 +1,15 @@
+language:
+  code: it
+  aliases: [it, italian]
+commands:
+  login:
+    aliases: [login, accedi]
+  register:
+    aliases: [register, registra]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8» &r'
+auth:
+  register-prompt: '%prefix%&eUsa /register <password> <password> per registrarti.'
+  login-prompt: '%prefix%&eUsa /login <password> per accedere.'

@@ -1,0 +1,26 @@
+language:
+  code: ru
+  aliases: [ru, ru_ru, russian]
+commands:
+  login:
+    aliases: [login, войти]
+  register:
+    aliases: [register, регистрация]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8» &r'
+  no-permission: '%prefix%&cНедостаточно прав.'
+auth:
+  register-prompt: '%prefix%&eИспользуйте /register <пароль> <пароль> для регистрации.'
+  login-prompt: '%prefix%&eИспользуйте /login <пароль> для входа.'
+visual:
+  register:
+    title: '&6Регистрация'
+    subtitle: '&fСоздайте пароль, чтобы продолжить'
+  login:
+    title: '&6Вход'
+    subtitle: '&fВойдите, чтобы продолжить'
+  captcha:
+    title: '&6Капча'
+    subtitle: '&fПодтвердите, что вы человек'

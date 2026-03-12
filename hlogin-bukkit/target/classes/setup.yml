@@ -1,0 +1,26 @@
+# Storage / language bootstrap configuration
+
+language:
+  default: pt_br
+
+storage:
+  type: MYSQL
+  default-language: en
+
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  database: hlogin
+  username: root
+  password:
+  ssl: false
+  pool-size: 10
+  connection-timeout: 5000
+  table-prefix: hlogin_
+  auto-create-tables: true
+  auto-migrate: true
+  # MySQL charset name. You can keep utf8mb4 even on Java 8; hLogin maps the JDBC client encoding safely.
+  charset: utf8mb4
+
+sqlite:
+  file: storage/hlogin.db

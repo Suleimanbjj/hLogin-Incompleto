@@ -1,0 +1,51 @@
+# ============================================
+# hLogin
+# Copyright (c) 2026 SuleimanDEV
+#
+# Arquivo de configuração de armazenamento e idioma.
+# Modifique conforme necessário para seu servidor.
+# ============================================
+
+# Configuração inicial de idioma e armazenamento
+language:
+  # Idioma padrão do plugin
+  default: pt_br
+
+storage:
+  # Tipo de armazenamento utilizado (MYSQL ou SQLITE)
+  type: MYSQL
+  # Idioma padrão salvo no banco de dados
+  default-language: en
+
+# Configuração de conexão MySQL
+mysql:
+  # Endereço do servidor MySQL
+  host: 127.0.0.1
+  # Porta do MySQL
+  port: 3306
+  # Nome do banco de dados
+  database: hlogin
+  # Usuário do banco
+  username: root
+  # Senha do banco
+  password:
+  # Ativar conexão SSL
+  ssl: false
+  # Quantidade de conexões no pool
+  pool-size: 10
+  # Tempo máximo de conexão em milissegundos
+  connection-timeout: 5000
+  # Prefixo das tabelas criadas pelo plugin
+  table-prefix: hlogin_
+  # Criar tabelas automaticamente caso não existam
+  auto-create-tables: true
+  # Atualizar estrutura das tabelas automaticamente
+  auto-migrate: true
+  # Charset utilizado no banco de dados
+  # Recomenda-se manter utf8mb4 para suporte completo a caracteres
+  charset: utf8mb4
+
+# Configuração de armazenamento SQLite
+sqlite:
+  # Caminho do arquivo do banco SQLite
+  file: storage/hlogin.db

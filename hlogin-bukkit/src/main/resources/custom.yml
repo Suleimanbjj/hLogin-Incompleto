@@ -1,0 +1,23 @@
+# ============================================
+# hLogin
+# Copyright (c) 2026 SuleimanDEV
+# ============================================
+
+# Arquivo de sobrescrita opcional que é carregado
+# por cima do config.yml principal.
+#
+# As configurações colocadas aqui irão substituir
+# os mesmos valores definidos no config.yml.
+#
+# Este arquivo é útil para definir configurações
+# específicas de ambiente (exemplo: desenvolvimento,
+# produção, testes) sem precisar modificar o
+# arquivo de configuração principal do plugin.
+#
+# Recomendado para:
+# - alterar dados de conexão
+# - modificar portas ou hosts
+# - definir valores diferentes entre servidores
+#
+# Se uma configuração existir aqui e no config.yml,
+# o valor deste arquivo terá prioridade.

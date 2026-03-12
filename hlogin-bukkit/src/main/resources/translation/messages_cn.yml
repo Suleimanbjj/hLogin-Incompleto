@@ -1,0 +1,26 @@
+language:
+  code: cn
+  aliases: [cn, zh_cn, chinese]
+commands:
+  login:
+    aliases: [login, denglu]
+  register:
+    aliases: [register, zhuce]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8» &r'
+  no-permission: '%prefix%&c你没有权限。'
+auth:
+  register-prompt: '%prefix%&e使用 /register <密码> <密码> 完成注册。'
+  login-prompt: '%prefix%&e使用 /login <密码> 完成登录。'
+visual:
+  register:
+    title: '&6注册'
+    subtitle: '&f创建密码后继续'
+  login:
+    title: '&6登录'
+    subtitle: '&f先验证身份再进入服务器'
+  captcha:
+    title: '&6验证码'
+    subtitle: '&f请确认你是真人'

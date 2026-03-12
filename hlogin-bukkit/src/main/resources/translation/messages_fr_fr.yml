@@ -1,0 +1,15 @@
+language:
+  code: fr_fr
+  aliases: [fr_fr, fr]
+commands:
+  login:
+    aliases: [login, connexion]
+  register:
+    aliases: [register, enregistrer]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8» &r'
+auth:
+  register-prompt: '%prefix%&eUtilisez /register <motdepasse> <motdepasse> pour vous inscrire.'
+  login-prompt: '%prefix%&eUtilisez /login <motdepasse> pour vous connecter.'

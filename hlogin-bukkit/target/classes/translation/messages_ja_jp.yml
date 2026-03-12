@@ -1,0 +1,26 @@
+language:
+  code: ja_jp
+  aliases: [ja_jp, ja, japanese]
+commands:
+  login:
+    aliases: [login]
+  register:
+    aliases: [register]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8» &r'
+  no-permission: '%prefix%&c権限がありません。'
+auth:
+  register-prompt: '%prefix%&e/register <パスワード> <パスワード> で登録してください。'
+  login-prompt: '%prefix%&e/login <パスワード> でログインしてください。'
+visual:
+  register:
+    title: '&6登録'
+    subtitle: '&f続行するにはパスワードを作成してください'
+  login:
+    title: '&6ログイン'
+    subtitle: '&fサーバーに入る前に認証してください'
+  captcha:
+    title: '&6キャプチャ'
+    subtitle: '&f人間であることを確認してください'

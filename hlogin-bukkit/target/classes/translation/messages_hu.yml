@@ -1,0 +1,15 @@
+language:
+  code: hu
+  aliases: [hu, hungarian]
+commands:
+  login:
+    aliases: [login, belepes]
+  register:
+    aliases: [register, regisztral]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8» &r'
+auth:
+  register-prompt: '%prefix%&eHasznald: /register <jelszo> <jelszo>.'
+  login-prompt: '%prefix%&eHasznald: /login <jelszo>.'

@@ -1,0 +1,125 @@
+# hLogin main configuration
+# Reloadable with /hlogin reload
+
+general:
+  server-name: lobby-auth
+  debug: false
+  audit-enabled: true
+
+auth:
+  auto-login-after-register: true
+  timeout-seconds: 60
+
+ux:
+  reminder-interval-seconds: 5
+
+session:
+  remember-session: true
+  remember-ip: true
+  remember-device: false
+  remember-duration-hours: 72
+  require-reauth-on-reconnect: false
+  expire-minutes: 60
+
+security:
+  max-attempts: 3
+  block-duration-seconds: 300
+  command-cooldown-millis: 1000
+  mask-passwords-in-logs: true
+  password:
+    min-length: 6
+    max-length: 32
+    require-confirmation: true
+    require-uppercase: false
+    require-lowercase: true
+    require-number: true
+    require-special: false
+    blocked-patterns:
+      - 123456
+      - password
+      - qwerty
+  hash:
+    algorithm: BCRYPT
+    bcrypt-cost: 12
+    pbkdf2-iterations: 200000
+    argon2-memory-kib: 65536
+    argon2-iterations: 3
+    argon2-parallelism: 2
+  ip:
+    whitelist-enabled: false
+    blacklist-enabled: false
+    whitelist: []
+    blacklist: []
+
+commands:
+  use-translated-aliases: true
+  login:
+    global-aliases:
+      - logar
+      - entrar
+  register:
+    global-aliases:
+      - registrar
+      - registar
+  admin:
+    global-aliases:
+      - hla
+
+captcha:
+  enabled: true
+  default-type: INVENTORY
+  require-on-register: false
+  require-on-login: false
+  after-failed-attempts: 2
+  only-suspicious-ip: false
+  timeout-seconds: 60
+  max-attempts: 3
+  failure-action: KICK
+  bypass-permission: true
+
+visual:
+  title:
+    enabled: true
+  actionbar:
+    enabled: true
+  bossbar:
+    enabled: true
+  hologram:
+    enabled: false
+    fallback-chat: true
+  countdown:
+    enabled: true
+  inventory-captcha:
+    enabled: true
+
+protection:
+  block-movement: true
+  block-damage: true
+  block-chat: true
+  block-commands: true
+  block-item-drop: true
+  block-item-pickup: true
+  block-inventory-click: true
+  block-interaction: true
+  hide-unauthenticated: false
+  invisible-unauthenticated: false
+  allowed-commands:
+    - login
+    - register
+    - l
+    - reg
+    - hlogin
+  safe-teleport:
+    enabled: false
+    world: world
+    x: 0.5
+    y: 64.0
+    z: 0.5
+    yaw: 0.0
+    pitch: 0.0
+
+premium:
+  auto-detect:
+    enabled: false
+    timeout-millis: 2500
+    endpoint: https://api.mojang.com/users/profiles/minecraft/%player%

@@ -1,0 +1,26 @@
+language:
+  code: tr
+  aliases: [tr, turkce, türkçe]
+commands:
+  login:
+    aliases: [login, giris, giriş]
+  register:
+    aliases: [register, kayit, kayıt]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8» &r'
+  no-permission: '%prefix%&cYetkin yok.'
+auth:
+  register-prompt: '%prefix%&eKaydolmak için /register <sifre> <sifre> kullan.'
+  login-prompt: '%prefix%&eGiriş yapmak için /login <sifre> kullan.'
+visual:
+  register:
+    title: '&6Kayit'
+    subtitle: '&fDevam etmek için sifreni oluştur'
+  login:
+    title: '&6Giris'
+    subtitle: '&fSunucuya girmek için doğrulan'
+  captcha:
+    title: '&6Captcha'
+    subtitle: '&fİnsan olduğunu doğrula'

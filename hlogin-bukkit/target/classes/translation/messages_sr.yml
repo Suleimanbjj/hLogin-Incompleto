@@ -1,0 +1,15 @@
+language:
+  code: sr
+  aliases: [sr, serbian]
+commands:
+  login:
+    aliases: [login, prijava]
+  register:
+    aliases: [register, registracija]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8» &r'
+auth:
+  register-prompt: '%prefix%&eKoristi /register <lozinka> <lozinka> za registraciju.'
+  login-prompt: '%prefix%&eKoristi /login <lozinka> za prijavu.'

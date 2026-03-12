@@ -1,0 +1,15 @@
+language:
+  code: cz
+  aliases: [cz, cs, czech]
+commands:
+  login:
+    aliases: [login, prihlasit]
+  register:
+    aliases: [register, registrovat]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8» &r'
+auth:
+  register-prompt: '%prefix%&ePouzij /register <heslo> <heslo> pro registraci.'
+  login-prompt: '%prefix%&ePouzij /login <heslo> pro prihlaseni.'

@@ -1,0 +1,26 @@
+language:
+  code: de
+  aliases: [de, de_de, deutsch]
+commands:
+  login:
+    aliases: [login, anmelden]
+  register:
+    aliases: [register, registrieren]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8» &r'
+  no-permission: '%prefix%&cDu hast keine Berechtigung.'
+auth:
+  register-prompt: '%prefix%&eNutze /register <passwort> <passwort> zum Registrieren.'
+  login-prompt: '%prefix%&eNutze /login <passwort> zum Einloggen.'
+visual:
+  register:
+    title: '&6Registrierung'
+    subtitle: '&fErstelle dein Passwort, um fortzufahren'
+  login:
+    title: '&6Login'
+    subtitle: '&fMelde dich an, um beizutreten'
+  captcha:
+    title: '&6Captcha'
+    subtitle: '&fBestätige, dass du ein Mensch bist'

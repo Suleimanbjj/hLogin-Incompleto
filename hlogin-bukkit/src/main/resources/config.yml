@@ -1,0 +1,259 @@
+# ============================================
+# hLogin
+# Copyright (c) 2026 SuleimanDEV
+#
+# Configuração principal do plugin
+# Recarregável com: /hlogin reload
+# ============================================
+
+
+# -------------------------------------------------
+# Configurações gerais do plugin
+# -------------------------------------------------
+general:
+  # Nome interno do servidor (usado em logs, auditoria e integrações)
+  server-name: lobby-auth
+
+  # Ativa logs detalhados para debug
+  debug: false
+
+  # Ativa sistema de auditoria de ações importantes
+  audit-enabled: true
+
+
+# -------------------------------------------------
+# Sistema de autenticação
+# -------------------------------------------------
+auth:
+  # Após registrar a conta o jogador já é logado automaticamente
+  auto-login-after-register: true
+
+  # Tempo máximo para o jogador fazer login antes de ser kickado
+  timeout-seconds: 60
+
+
+# -------------------------------------------------
+# Configurações de experiência do usuário
+# -------------------------------------------------
+ux:
+  # Intervalo de lembrete no chat para o jogador logar/registrar
+  reminder-interval-seconds: 5
+
+
+# -------------------------------------------------
+# Sistema de sessão (lembrar login)
+# -------------------------------------------------
+session:
+  # Lembrar sessão do jogador
+  remember-session: true
+
+  # Vincular sessão ao IP
+  remember-ip: true
+
+  # Vincular sessão ao dispositivo
+  remember-device: false
+
+  # Tempo que a sessão ficará válida
+  remember-duration-hours: 72
+
+  # Exigir autenticação novamente ao reconectar
+  require-reauth-on-reconnect: false
+
+  # Tempo de expiração da sessão
+  expire-minutes: 60
+
+
+# -------------------------------------------------
+# Configurações de segurança
+# -------------------------------------------------
+security:
+  # Número máximo de tentativas de login
+  max-attempts: 3
+
+  # Tempo que o jogador ficará bloqueado após falhar várias vezes
+  block-duration-seconds: 300
+
+  # Cooldown entre execução de comandos de autenticação
+  command-cooldown-millis: 1000
+
+  # Ocultar senhas nos logs do servidor
+  mask-passwords-in-logs: true
+
+  password:
+    # Tamanho mínimo da senha
+    min-length: 6
+
+    # Tamanho máximo da senha
+    max-length: 32
+
+    # Exigir confirmação de senha no registro
+    require-confirmation: true
+
+    # Regras de complexidade
+    require-uppercase: false
+    require-lowercase: true
+    require-number: true
+    require-special: false
+
+    # Senhas proibidas
+    blocked-patterns:
+      - 123456
+      - password
+      - qwerty
+
+  # -------------------------------------------------
+  # Configuração de hash de senha
+  # -------------------------------------------------
+  hash:
+    # Algoritmo utilizado para armazenar senha
+    algorithm: BCRYPT
+
+    # Configuração do bcrypt
+    bcrypt-cost: 12
+
+    # Configuração alternativa PBKDF2
+    pbkdf2-iterations: 200000
+
+    # Configuração alternativa Argon2
+    argon2-memory-kib: 65536
+    argon2-iterations: 3
+    argon2-parallelism: 2
+
+  # -------------------------------------------------
+  # Controle de IP
+  # -------------------------------------------------
+  ip:
+    whitelist-enabled: false
+    blacklist-enabled: false
+    whitelist: []
+    blacklist: []
+
+
+# -------------------------------------------------
+# Sistema de comandos
+# -------------------------------------------------
+commands:
+  # Permite usar aliases traduzidos automaticamente
+  use-translated-aliases: true
+
+  login:
+    global-aliases:
+      - logar
+      - entrar
+
+  register:
+    global-aliases:
+      - registrar
+      - registar
+
+  admin:
+    global-aliases:
+      - hla
+
+
+# -------------------------------------------------
+# Sistema de captcha
+# -------------------------------------------------
+captcha:
+  enabled: true
+
+  # Tipo padrão de captcha INVENTORY, MATH, TEXT ou VISUAL
+  default-type: INVENTORY
+
+  # Exigir captcha ao registrar
+  require-on-register: true
+
+  # Exigir captcha ao logar
+  require-on-login: true
+
+  # Ativar captcha após X tentativas falhas
+  after-failed-attempts: 2
+
+  # Aplicar captcha apenas para IP suspeito
+  only-suspicious-ip: false
+
+  # Tempo máximo para resolver o captcha
+  timeout-seconds: 60
+
+  # Tentativas máximas
+  max-attempts: 3
+
+  # Ação em caso de falha
+  failure-action: KICK
+
+  # Permissão para ignorar captcha
+  bypass-permission: true
+
+
+# -------------------------------------------------
+# Configurações visuais
+# -------------------------------------------------
+visual:
+  title:
+    enabled: true
+
+  actionbar:
+    enabled: true
+
+  bossbar:
+    enabled: true
+
+  hologram:
+    enabled: false
+    fallback-chat: true
+
+  countdown:
+    enabled: true
+
+  inventory-captcha:
+    enabled: true
+
+
+# -------------------------------------------------
+# Proteções antes do login
+# -------------------------------------------------
+protection:
+  block-movement: true
+  block-damage: true
+  block-chat: true
+  block-commands: true
+  block-item-drop: true
+  block-item-pickup: true
+  block-inventory-click: true
+  block-interaction: true
+
+  # Ocultar jogadores não autenticados
+  hide-unauthenticated: false
+  invisible-unauthenticated: false
+
+  # Comandos permitidos antes do login
+  allowed-commands:
+    - login
+    - register
+    - l
+    - reg
+    - hlogin
+
+  # Teleporte seguro antes do login
+  safe-teleport:
+    enabled: false
+    world: world
+    x: 0.5
+    y: 64.0
+    z: 0.5
+    yaw: 0.0
+    pitch: 0.0
+
+
+# -------------------------------------------------
+# Detecção de conta premium (Mojang)
+# -------------------------------------------------
+premium:
+  auto-detect:
+    enabled: false
+
+    # Tempo máximo de consulta à API da Mojang
+    timeout-millis: 2500
+
+    # Endpoint utilizado para verificar conta premium
+    endpoint: https://api.mojang.com/users/profiles/minecraft/%player%

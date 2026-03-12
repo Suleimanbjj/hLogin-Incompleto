@@ -1,0 +1,66 @@
+name: hLogin
+main: dev.helix.suleiman.login.HLoginPlugin
+version: 1.0.0-SNAPSHOT
+author: SuleimanDEV
+description: Professional multi-module authentication plugin with multilingual UX and multi-version visual compatibility.
+softdepend:
+  - PlaceholderAPI
+commands:
+  login:
+    description: Authenticate an existing account.
+    usage: /login <password>
+    permission: hlogin.command.login
+  register:
+    description: Create a new account.
+    usage: /register <password> <password>
+    permission: hlogin.command.register
+  hlogin:
+    description: Administrative command root.
+    usage: /hlogin <subcommand>
+    permission: hlogin.admin
+permissions:
+  hlogin.admin:
+    description: Grants access to every hLogin administrative subcommand.
+    default: op
+  hlogin.reload:
+    description: Allows /hlogin reload.
+    default: op
+  hlogin.status:
+    description: Allows /hlogin status.
+    default: op
+  hlogin.user:
+    description: Allows /hlogin user <player>.
+    default: op
+  hlogin.unregister:
+    description: Allows /hlogin unregister <player>.
+    default: op
+  hlogin.resetpassword:
+    description: Allows /hlogin resetpassword <player>.
+    default: op
+  hlogin.setlang:
+    description: Allows /hlogin setlang <player> <lang>.
+    default: op
+  hlogin.forcecaptcha:
+    description: Allows /hlogin forcecaptcha <player>.
+    default: op
+  hlogin.debug:
+    description: Allows /hlogin debug.
+    default: op
+  hlogin.bypass.captcha:
+    description: Bypasses captcha requirements.
+    default: false
+  hlogin.bypass.loginblock:
+    description: Bypasses unauthenticated protections.
+    default: false
+  hlogin.bypass.commandblock:
+    description: Bypasses command restrictions before authentication.
+    default: false
+  hlogin.bypass.movement:
+    description: Bypasses movement restrictions before authentication.
+    default: false
+  hlogin.command.login:
+    description: Allows /login.
+    default: true
+  hlogin.command.register:
+    description: Allows /register.
+    default: true

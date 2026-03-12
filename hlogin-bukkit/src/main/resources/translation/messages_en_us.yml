@@ -1,0 +1,103 @@
+language:
+  code: en_us
+  aliases: [en_us, en, english, us]
+commands:
+  login:
+    aliases: [login, log]
+  register:
+    aliases: [register, reg]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8» &r'
+  player-only: '%prefix%&cOnly players can use this command.'
+  no-permission: '%prefix%&cYou do not have permission.'
+  reloaded: '%prefix%&aConfiguration, storage settings and translations were reloaded.'
+  version: '%prefix%&fVersion: &e{0} &8| &fCompat: &e{1}'
+command:
+  usage-login: '%prefix%&eUsage: /login <password>'
+  usage-register: '%prefix%&eUsage: /register <password> <password>'
+  usage-user: '%prefix%&eUsage: /hlogin user <player>'
+  usage-unregister: '%prefix%&eUsage: /hlogin unregister <player>'
+  usage-resetpassword: '%prefix%&eUsage: /hlogin resetpassword <player>'
+  usage-setlang: '%prefix%&eUsage: /hlogin setlang <player> <language>'
+  usage-forcecaptcha: '%prefix%&eUsage: /hlogin forcecaptcha <player>'
+  admin-help:
+    - '&6&l hLogin Commands'
+    - '&e/hlogin help &7- Show this help list'
+    - '&e/hlogin reload &7- Reload configs and translations'
+    - '&e/hlogin status &7- Display runtime status'
+    - '&e/hlogin version &7- Show plugin and compat version'
+    - '&e/hlogin user <player> &7- Show account information'
+    - '&e/hlogin unregister <player> &7- Remove an account'
+    - '&e/hlogin resetpassword <player> &7- Generate a temporary password'
+    - '&e/hlogin setlang <player> <lang> &7- Change account language'
+    - '&e/hlogin forcecaptcha <player> &7- Force a captcha challenge'
+admin:
+  status-line: '%prefix%&fPlugin: &e{0} &8| &fAdapter: &e{1} &8| &fStorage: &e{2} &8| &fSessions: &e{3}'
+  debug-enabled: '%prefix%&aDebug mode enabled.'
+  debug-disabled: '%prefix%&cDebug mode disabled.'
+  user-not-found: '%prefix%&cThe requested account was not found.'
+  user-not-online: '%prefix%&cThat player is not online.'
+  unregister-success: '%prefix%&aAccount removed successfully.'
+  resetpassword-success: '%prefix%&aPassword reset successfully.'
+  language-set: '%prefix%&aLanguage updated successfully.'
+  forcecaptcha-success: '%prefix%&aCaptcha forced successfully.'
+  user-header: '%prefix%&fAccount profile for &e{0}'
+  user-line: '&8- &f{0}: &e{1}'
+auth:
+  session-missing: '%prefix%&cYour authentication session is not ready yet.'
+  already-registered: '%prefix%&cThis account is already registered.'
+  not-registered: '%prefix%&cYou need to register first.'
+  login-invalid: '%prefix%&cInvalid password.'
+  blocked: '%prefix%&cYou are temporarily blocked from logging in.'
+  login-success: '%prefix%&aLogin successful.'
+  logout-success: '%prefix%&eYou were logged out.'
+  register-success: '%prefix%&aRegistration completed successfully.'
+  register-login-success: '%prefix%&aRegistration completed and you were logged in automatically.'
+  password-updated: '%prefix%&aPassword updated successfully.'
+  password-empty: '%prefix%&cPassword cannot be empty.'
+  password-too-short: '%prefix%&cPassword is too short.'
+  password-too-long: '%prefix%&cPassword is too long.'
+  password-mismatch: '%prefix%&cPassword confirmation does not match.'
+  password-missing-uppercase: '%prefix%&cPassword must contain an uppercase letter.'
+  password-missing-lowercase: '%prefix%&cPassword must contain a lowercase letter.'
+  password-missing-number: '%prefix%&cPassword must contain a number.'
+  password-missing-special: '%prefix%&cPassword must contain a special character.'
+  password-blocked-pattern: '%prefix%&cPassword contains a blocked pattern.'
+  password-valid: '%prefix%&aPassword accepted.'
+  register-prompt: '%prefix%&eUse /register <password> <password> to create your account.'
+  login-prompt: '%prefix%&eUse /login <password> to authenticate.'
+captcha:
+  none: '%prefix%&cThere is no pending captcha challenge.'
+  required: '%prefix%&eSolve the captcha before continuing.'
+  timeout: '%prefix%&cCaptcha expired. Request a new one.'
+  failed: '%prefix%&cWrong captcha answer.'
+  success: '%prefix%&aCaptcha solved successfully.'
+  solve-now: '&eSolve the captcha now'
+  inventory-title: 'Security Check'
+  inventory-correct: '&aCorrect'
+  inventory-wrong: '&cWrong'
+protection:
+  command-blocked: '%prefix%&cYou must authenticate before using this command.'
+session:
+  timeout-kick: '&cAuthentication timeout exceeded.'
+visual:
+  register:
+    title: '&6Register'
+    subtitle: '&fCreate your password to continue'
+    hologram:
+      - '&6&lRegister'
+      - '&fUse &e/register <password> <password>'
+  login:
+    title: '&6Login'
+    subtitle: '&fAuthenticate to access the server'
+    hologram:
+      - '&6&lLogin'
+      - '&fUse &e/login <password>'
+  captcha:
+    title: '&6Captcha'
+    subtitle: '&fConfirm that you are human'
+    hologram:
+      - '&6&lCaptcha'
+      - '&fSolve the challenge below'

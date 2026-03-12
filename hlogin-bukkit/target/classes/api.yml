@@ -1,0 +1,23 @@
+# API / webhook / external integration configuration
+
+webhook:
+  enabled: false
+  url: https://example.com/hlogin/webhook
+  method: POST
+  content-type: application/json
+  timeout-millis: 3000
+  retries: 2
+  headers:
+    X-Plugin: hLogin
+    X-Environment: production
+  payload-templates:
+    register_success: '{"event":"register_success","player":"%player%","uuid":"%uuid%","ip":"%ip%","timestamp":"%timestamp%","language":"%language%"}'
+    login_success: '{"event":"login_success","player":"%player%","uuid":"%uuid%","ip":"%ip%","timestamp":"%timestamp%","attempts":"%attempts%","result":"%result%"}'
+    login_failure: '{"event":"login_failure","player":"%player%","uuid":"%uuid%","ip":"%ip%","timestamp":"%timestamp%","attempts":"%attempts%","result":"%result%"}'
+    account_created: '{"event":"account_created","player":"%player%","uuid":"%uuid%","timestamp":"%timestamp%","server":"%server%"}'
+    account_blocked: '{"event":"account_blocked","player":"%player%","uuid":"%uuid%","attempts":"%attempts%","timestamp":"%timestamp%"}'
+    password_changed: '{"event":"password_changed","player":"%player%","uuid":"%uuid%","timestamp":"%timestamp%"}'
+    captcha_failed: '{"event":"captcha_failed","player":"%player%","uuid":"%uuid%","attempts":"%attempts%","timestamp":"%timestamp%"}'
+    suspicious_activity: '{"event":"suspicious_activity","player":"%player%","uuid":"%uuid%","ip":"%ip%","timestamp":"%timestamp%"}'
+    admin_force_unregister: '{"event":"admin_force_unregister","player":"%player%","uuid":"%uuid%","timestamp":"%timestamp%"}'
+    admin_force_reset_password: '{"event":"admin_force_reset_password","player":"%player%","uuid":"%uuid%","timestamp":"%timestamp%"}'

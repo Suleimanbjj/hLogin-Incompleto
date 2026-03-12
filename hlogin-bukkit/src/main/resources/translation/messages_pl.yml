@@ -1,0 +1,15 @@
+language:
+  code: pl
+  aliases: [pl, polish]
+commands:
+  login:
+    aliases: [login, zaloguj]
+  register:
+    aliases: [register, zarejestruj]
+  admin:
+    aliases: [hlogin]
+general:
+  prefix: '&6&lhLogin &8» &r'
+auth:
+  register-prompt: '%prefix%&eUzyj /register <haslo> <haslo>, aby sie zarejestrowac.'
+  login-prompt: '%prefix%&eUzyj /login <haslo>, aby sie zalogowac.'
